@@ -1,0 +1,1396 @@
+<?php
+?>
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <title>DeepGram | Pitch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/pitch.css">
+    <script src="js/matrix_effect.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  
+    <script>
+  window.pixelId = "692fa7713a7201fbffd7c0c9";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+   <script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+  
+  
+<body>
+  <canvas id="c">
+  </canvas>
+  <div class="pitch-overlay">
+    <div class="pitch-topbar">
+      <button class="pitch-back" aria-label="Voltar">
+        <svg viewBox="0 0 24 24" width="20" height="20">
+          <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" fill="none"
+          stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <div class="pitch-expire text-white px-3 py-2 rounded-md flex items-center gap-2">
+        <svg viewBox="0 0 24 24" width="16" height="16">
+          <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="none"
+          />
+          <path d="M12 7v5l3 2" stroke="currentColor" stroke-width="2" fill="none"
+          stroke-linecap="round" />
+        </svg>
+        Seu Acesso Exclusivo Expira em:
+        <span id="pitch-timer">
+          05:00
+        </span>
+      </div>
+    </div>
+    <div class="pitch-brand-row mt-12">
+      <img src="styles/img/image.webp" alt="DeepGram" class="pitch-brand-logo"
+      />
+    </div>
+    <h1 class="pitch-title text-xl">
+      A maior ferramenta de stalkear do Brasil
+    </h1>
+    <div class="pitch-card">
+      <h1 class="pitch-card-title">
+        Acesso completo ao perfil de:
+      </h1>
+      <div class="pitch-row">
+        <div class="pitch-ring">
+          <div class="pitch-ring-inner">
+            <img id="pitch-avatar" src="styles/img/instagram/feed/profiles/p-min-1.webp"
+            alt="Avatar" class="pitch-avatar">
+          </div>
+        </div>
+        <div class="pitch-info">
+          <h2 class="pitch-handle" id="pitch-handle">
+            @...
+          </h2>
+          <p class="pitch-emoji" id="pitch-emoji">
+            ...
+          </p>
+          <div class="pitch-stats">
+            <div class="pitch-stat">
+              <span class="value" id="pitch-posts">
+                1
+              </span>
+              <span class="label">
+                posts
+              </span>
+            </div>
+            <div class="pitch-stat">
+              <span class="value" id="pitch-followers">
+                5.320
+              </span>
+              <span class="label">
+                seguidores
+              </span>
+            </div>
+            <div class="pitch-stat">
+              <span class="value" id="pitch-following">
+                1
+              </span>
+              <span class="label">
+                seguindo
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="pitch-bio" id="pitch-bio">
+        faça o favor de me ouvir e fique rico, o suprasumo do conteúdo que você
+        precisa , está aqui até esqueci quantos milhões já fiz , então não me pergunte
+      </p>
+      <div class="pitch-cta">
+        <p>
+          Sem precisar de senha. Sem deixar rastros. Sem que a pessoa saiba.
+        </p>
+      </div>
+    </div>
+    <div class="flex justify-center mt-4" style="opacity: 1; transform: none;">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-10 h-10 text-white/60 animate-bounce">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M19 14l-7 7m0 0l-7-7m7 7V3" class="jsx-9c72d2e4e5927511">
+        </path>
+      </svg>
+    </div>
+    <!-- Beneficios -->
+    <div style="background: rgb(12, 16, 17); backdrop-filter: blur(20px); border: 1px solid rgba(54, 54, 54, 0.2); opacity: 1; transform: none;"
+    class="rounded-3xl p-8 shadow-xl border backdrop-blur-lg">
+      <div class="space-y-12">
+        <!-- Todas midias -->
+        <div id="midias-ocultas">
+          <div class="flex items-start gap-3 mb-4">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-8 h-8 text-[#EB1C8F] flex-shrink-0">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+              class="jsx-9c72d2e4e5927511">
+              </path>
+            </svg>
+            <div class="flex-1">
+              <h3 id="pitch-medias-h3" class="font-bold text-white text-lg mb-2">
+                Todas as mídias recebidas e enviadas por @...
+              </h3>
+              <p class="text-gray-400 text-sm">
+                Incluindo arquivos ocultos que não estão "visíveis pra todos".
+              </p>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-2">
+            <div class="jsx-9c72d2e4e5927511 aspect-square bg-gray-800/50 rounded-lg flex items-center justify-center border border-white/5 relative">
+              <div class="jsx-9c72d2e4e5927511 absolute inset-0 flex items-center justify-center">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-8 h-8 text-white/70">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                  class="jsx-9c72d2e4e5927511">
+                  </path>
+                </svg>
+              </div>
+            </div>
+            <div class="jsx-9c72d2e4e5927511 aspect-square bg-gray-800/50 rounded-lg flex items-center justify-center border border-white/5 relative">
+              <div class="jsx-9c72d2e4e5927511 absolute inset-0 flex items-center justify-center">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-8 h-8 text-white/70">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                  class="jsx-9c72d2e4e5927511">
+                  </path>
+                </svg>
+              </div>
+            </div>
+            <div class="jsx-9c72d2e4e5927511 aspect-square bg-gray-800/50 rounded-lg flex items-center justify-center border border-white/5 relative">
+              <div class="jsx-9c72d2e4e5927511 absolute inset-0 flex items-center justify-center">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-8 h-8 text-white/70">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                  class="jsx-9c72d2e4e5927511">
+                  </path>
+                </svg>
+              </div>
+            </div>
+            <div class="jsx-9c72d2e4e5927511 aspect-square bg-gray-800/50 rounded-lg flex items-center justify-center border border-white/5 relative">
+              <div class="jsx-9c72d2e4e5927511 absolute inset-0 flex items-center justify-center">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-8 h-8 text-white/70">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                  class="jsx-9c72d2e4e5927511">
+                  </path>
+                </svg>
+              </div>
+            </div>
+            <div class="jsx-9c72d2e4e5927511 aspect-square bg-gray-800/50 rounded-lg flex items-center justify-center border border-white/5 relative">
+              <div class="jsx-9c72d2e4e5927511 absolute inset-0 flex items-center justify-center">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-8 h-8 text-white/70">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                  class="jsx-9c72d2e4e5927511">
+                  </path>
+                </svg>
+              </div>
+            </div>
+            <div class="jsx-9c72d2e4e5927511 aspect-square bg-gray-800/50 rounded-lg flex items-center justify-center border border-white/5 relative">
+              <div class="jsx-9c72d2e4e5927511 absolute inset-0 flex items-center justify-center">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-8 h-8 text-white/70">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                  class="jsx-9c72d2e4e5927511">
+                  </path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="jsx-9c72d2e4e5927511 border-t border-white/10">
+        </div>
+        <!-- Localização em tempo real -->
+        <div id="tempo-real">
+          <div class="flex items-start gap-3 mb-4">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-8 h-8 text-[#DFB313] flex-shrink-0">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+              class="jsx-9c72d2e4e5927511">
+              </path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" class="jsx-9c72d2e4e5927511">
+              </path>
+            </svg>
+            <div class="flex-1">
+              <h3 class="font-bold text-white text-lg mb-2">
+                Localização em tempo real de @
+              </h3>
+              <p class="text-gray-400 text-sm">
+                Veja onde a pessoa está agora e por onde passou nas últimas horas.
+              </p>
+            </div>
+          </div>
+          <div style="max-width:320px" class="overflow-hidden rounded-2xl">
+            <div class="relative w-full h-36 overflow-hidden">
+              <img src="styles/img/map-real.webp" alt="" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+              class="object-cover blur-sm scale-110">
+              <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+                <div class="w-16 h-16 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                  <img src="" class="w-full h-full object-cover" alt="" width="64" height="64"
+                  decoding="async">
+                </div>
+              </div>
+            </div>
+            <div class="jsx-9c72d2e4e5927511 bg-[#1F2937] p-4">
+              <p class="jsx-9c72d2e4e5927511 text-white font-semibold text-sm mb-1">
+                Localização atual
+              </p>
+              <p class="jsx-9c72d2e4e5927511 text-gray-400 text-xs mb-3">
+                Veja exatamente aonde esta!
+              </p>
+              <button style="background:#253040" class="jsx-9c72d2e4e5927511 w-full py-2 rounded-lg font-semibold text-sm text-center text-white">
+                Ver
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="jsx-9c72d2e4e5927511 border-t border-white/10">
+        </div>
+        <div id="stories-ocultos">
+          <div class="flex items-start gap-3 mb-4">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-8 h-8 text-[#8B2C8B] flex-shrink-0">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" class="jsx-9c72d2e4e5927511">
+              </path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+              class="jsx-9c72d2e4e5927511">
+              </path>
+            </svg>
+            <div class="flex-1">
+              <h3 class="font-bold text-white text-lg mb-2">
+                Stories e posts ocultos
+              </h3>
+              <p class="text-gray-400 text-sm">
+                Aqueles postados pra "Melhores Amigos" ou ocultados de você.
+              </p>
+              <p class="jsx-9c72d2e4e5927511 text-white text-sm font-semibold mt-1">
+                Você verá mesmo se o perfil for privado.
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <div class="flex-1 aspect-[9/16] rounded-2xl flex flex-col items-center justify-center py-3 px-2 relative overflow-hidden max-w-[160px]"
+            style="background-color:#121822">
+              <div class="absolute top-2 left-2 z-10">
+                <div class="flex items-center gap-1.5">
+                  <div class="rounded-full p-[1.5px]" style="background: linear-gradient(135deg, rgb(235, 28, 143), rgb(223, 179, 19));">
+                    <img src="" alt="" width="24" height="24" decoding="async" class="rounded-full object-cover">
+                  </div>
+                  <span class="jsx-9c72d2e4e5927511 text-white text-[10px] font-semibold truncate max-w-[80px]">
+                    @
+                  </span>
+                </div>
+              </div>
+              <div class="jsx-9c72d2e4e5927511 flex flex-col items-center gap-3">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-10 h-10 text-white/80">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                  class="jsx-9c72d2e4e5927511">
+                  </path>
+                </svg>
+                <p class="jsx-9c72d2e4e5927511 text-white/90 font-medium text-center text-xs px-2">
+                  Conteúdo restrito
+                </p>
+              </div>
+            </div>
+            <div class="flex-1 aspect-[9/16] rounded-2xl flex flex-col items-center justify-center py-3 px-2 relative overflow-hidden max-w-[160px]"
+            style="background-color:#121822">
+              <div class="absolute top-2 left-2 z-10">
+                <div class="flex items-center gap-1.5">
+                  <div class="rounded-full p-[1.5px]" style="background: linear-gradient(135deg, rgb(235, 28, 143), rgb(223, 179, 19));">
+                    <img src="" alt="" width="24" height="24" decoding="async" class="rounded-full object-cover">
+                  </div>
+                  <span class="jsx-9c72d2e4e5927511 text-white text-[10px] font-semibold truncate max-w-[80px]">
+                    @
+                  </span>
+                </div>
+              </div>
+              <div class="jsx-9c72d2e4e5927511 flex flex-col items-center gap-3">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-10 h-10 text-white/80">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                  class="jsx-9c72d2e4e5927511">
+                  </path>
+                </svg>
+                <p class="jsx-9c72d2e4e5927511 text-white/90 font-medium text-center text-xs px-2">
+                  Conteúdo restrito
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="jsx-9c72d2e4e5927511 border-t border-white/10">
+        </div>
+        <div id="mensagens-privadas">
+          <div class="flex items-start gap-3 mb-4">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-8 h-8 text-[#8B2C8B] flex-shrink-0">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" class="jsx-9c72d2e4e5927511">
+              </path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+              class="jsx-9c72d2e4e5927511">
+              </path>
+            </svg>
+            <div class="flex-1">
+              <h3 class="font-bold text-white text-lg mb-2">
+                Mensagens privadas do Instagram (Directs)
+              </h3>
+              <p class="text-gray-400 text-sm">
+                Conversas, fotos, vídeos, áudios, contatos... tudo.
+              </p>
+            </div>
+          </div>
+          <div class="max-w-md mx-auto bg-black/30 rounded-3xl overflow-hidden border border-white/10">
+            <div class="px-4 py-3 flex items-center justify-between border-b border-white/5">
+              <div class="jsx-9c72d2e4e5927511 flex items-center gap-3">
+                <button class="jsx-9c72d2e4e5927511 text-white/60">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 19l-7-7 7-7" class="jsx-9c72d2e4e5927511">
+                    </path>
+                  </svg>
+                </button>
+                <img alt="Chat" loading="lazy" width="36" height="36" decoding="async"
+                data-nimg="1" class="rounded-full object-cover" style="color:transparent"
+                src="styles/img/chat1.webp">
+                <div class="jsx-9c72d2e4e5927511">
+                  <p class="jsx-9c72d2e4e5927511 text-white font-semibold text-sm blur-sm select-none">
+                    l*****
+                  </p>
+                  <p class="jsx-9c72d2e4e5927511 text-gray-400 text-xs">
+                    online
+                  </p>
+                </div>
+              </div>
+              <div class="jsx-9c72d2e4e5927511 flex items-center gap-4">
+                <button class="jsx-9c72d2e4e5927511 text-white">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    class="jsx-9c72d2e4e5927511">
+                    </path>
+                  </svg>
+                </button>
+                <button class="jsx-9c72d2e4e5927511 text-white">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                    class="jsx-9c72d2e4e5927511">
+                    </path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="jsx-9c72d2e4e5927511 p-4 space-y-2 bg-[#0B1014]">
+              <div class="jsx-9c72d2e4e5927511 flex justify-start">
+                <div class="jsx-9c72d2e4e5927511 flex items-start gap-2">
+                  <div style="background:#3A3A3C" class="jsx-9c72d2e4e5927511 rounded-2xl px-4 py-3 flex items-center gap-2">
+                    <svg fill="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-5 h-5 text-white">
+                      <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"
+                      class="jsx-9c72d2e4e5927511">
+                      </path>
+                    </svg>
+                    <div class="jsx-9c72d2e4e5927511 flex flex-col">
+                      <span class="jsx-9c72d2e4e5927511 text-white text-sm font-medium">
+                        Ligação de vídeo
+                      </span>
+                      <span class="jsx-9c72d2e4e5927511 text-white/60 text-xs">
+                        <span class="jsx-9c72d2e4e5927511 blur-sm select-none">
+                          ••
+                        </span>
+                        :47
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="jsx-9c72d2e4e5927511 flex justify-end">
+                <div style="background:linear-gradient(135deg, rgb(142, 52, 242) 0%, rgb(111, 60, 249) 100%);color:white"
+                class="jsx-9c72d2e4e5927511 rounded-2xl px-4 py-3 max-w-[70%]">
+                  <div style="width:140px" class="jsx-9c72d2e4e5927511 h-4 bg-white/20 rounded blur-sm">
+                  </div>
+                </div>
+              </div>
+              <div class="jsx-9c72d2e4e5927511 flex justify-end mb-4">
+                <div style="background:linear-gradient(135deg, rgb(142, 52, 242) 0%, rgb(111, 60, 249) 100%);color:white"
+                class="jsx-9c72d2e4e5927511 rounded-2xl px-4 py-3 max-w-[70%]">
+                  <div style="width:180px" class="jsx-9c72d2e4e5927511 h-4 bg-white/20 rounded blur-sm">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-center mt-4" style="opacity: 1; transform: none;">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-10 h-10 text-white/60 animate-bounce">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M19 14l-7 7m0 0l-7-7m7 7V3" class="jsx-9c72d2e4e5927511">
+        </path>
+      </svg>
+    </div>
+    <!-- CPA 1 -->
+    <div class="relative rounded-3xl p-8 shadow-xl border backdrop-blur-lg overflow-visible"
+    style="background: rgb(12, 16, 17); backdrop-filter: blur(20px); border: 1px solid rgba(54, 54, 54, 0.2); opacity: 1; transform: none;">
+      <div class="absolute inset-0 overflow-hidden pointer-events-none z-0 h-full">
+        <div style="animation:shine 3s infinite;transform:translateX(-100%)" class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent">
+        </div>
+      </div>
+      <div class="relative z-10 flex justify-center mb-4">
+        <div class="w-20 h-20">
+          <img src="styles/img/image.webp" alt="" width="80" height="80" class="w-full h-full object-contain">
+        </div>
+      </div>
+      <h2 class="relative z-10 jsx-9c72d2e4e5927511 text-xl md:text-2xl font-bold text-center mb-3 leading-tight text-white">
+        Além do acesso ao perfil
+        <span class="jsx-9c72d2e4e5927511 bg-gradient-to-r from-[#EB1C8F] to-[#DFB313] bg-clip-text text-transparent">
+          você poderá ter acesso a ferramenta do
+          <span class="jsx-9c72d2e4e5927511 bg-gradient-to-r from-[#EB1C8F] to-[#DFB313] bg-clip-text text-transparent">
+            DeepGram
+          </span>
+      </h2>
+      <p class="relative z-10 jsx-9c72d2e4e5927511 text-gray-300 text-center mb-6 text-lg md:text-base">
+        De forma completa e vitalícia, ou seja, stalkear quantos perfis quiser,
+        quando quiser pra sempre.
+      </p>
+      <div class="relative z-10 jsx-9c72d2e4e5927511 space-y-3 mb-12 mt-12">
+        <div class="jsx-9c72d2e4e5927511 flex items-start gap-3 text-white">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-5 h-5 text-green-500 flex-shrink-0 mt-0.5">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 1 1-14 0 7 7 0 0 1 14 0z" class="jsx-9c72d2e4e5927511">
+            </path>
+          </svg>
+          <span class="jsx-9c72d2e4e5927511 text-sm md:text-base">
+            Pesquisar quantos perfis quiser.
+          </span>
+        </div>
+        <div class="jsx-9c72d2e4e5927511 flex items-start gap-3 text-white">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-5 h-5 text-green-500 flex-shrink-0 mt-0.5">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" class="jsx-9c72d2e4e5927511">
+            </path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+            class="jsx-9c72d2e4e5927511">
+            </path>
+          </svg>
+          <span class="jsx-9c72d2e4e5927511 text-sm md:text-base">
+            Visualizar todos os dados com apenas um clique.
+          </span>
+        </div>
+        <div class="jsx-9c72d2e4e5927511 flex items-start gap-3 text-white">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-5 h-5 text-green-500 flex-shrink-0 mt-0.5">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" class="jsx-9c72d2e4e5927511">
+            </path>
+          </svg>
+          <span class="jsx-9c72d2e4e5927511 text-sm md:text-base">
+            Ter acesso vitalício sem pagar mensalidade.
+          </span>
+        </div>
+        <div class="jsx-9c72d2e4e5927511 flex items-start gap-3 text-white">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-5 h-5 text-green-500 flex-shrink-0 mt-0.5">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3 15a4 4 0 0 0 4 4h9a5 5 0 1 0-.1-9.999 5.002 5.002 0 1 0-9.78 2.096A4.001 4.001 0 0 0 3 15z"
+            class="jsx-9c72d2e4e5927511">
+            </path>
+          </svg>
+          <span class="jsx-9c72d2e4e5927511 text-sm md:text-base">
+            Sem instalar nada, serviço funciona na nuvem.
+          </span>
+        </div>
+      </div>
+      <div style="background:linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);box-shadow:0 10px 40px rgba(220, 38, 38, 0.3)"
+      class="jsx-9c72d2e4e5927511 rounded-2xl pt-4 pb-4 pr-3 pl-3 text-center relative overflow-hidden">
+        <div class="jsx-9c72d2e4e5927511 relative z-10">
+          <p class="jsx-9c72d2e4e5927511 text-white font-bold text-sm mb-2">
+            SEM O DEEPGRAM, VOCÊ NÃO VÊ NADA
+          </p>
+          <p class="jsx-9c72d2e4e5927511 text-white/90 text-sm">
+            É ele quem desbloqueia os dados do Instagram de forma invisível
+          </p>
+        </div>
+        <div class="jsx-9c72d2e4e5927511 absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-50">
+        </div>
+      </div>
+    </div>
+    <!-- CPA 2 -->
+    <div class="rounded-3xl p-8 shadow-xl border backdrop-blur-lg" style="background: rgb(12, 16, 17); backdrop-filter: blur(20px); border: 1px solid rgba(54, 54, 54, 0.2); opacity: 1; transform: none;">
+      <h2 class="jsx-9c72d2e4e5927511 text-2xl font-bold text-white mb-6 text-center">
+        Tenha o controle de qualquer perfil em suas mãos!
+      </h2>
+      <div class="jsx-9c72d2e4e5927511 space-y-4">
+        <div class="jsx-9c72d2e4e5927511 flex items-start gap-3 text-white">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-6 h-6 text-red-500 flex-shrink-0 mt-0.5">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+            class="jsx-9c72d2e4e5927511">
+            </path>
+          </svg>
+          <span class="jsx-9c72d2e4e5927511">
+            Descobrir uma traição antes de ser feita de trouxa
+          </span>
+        </div>
+        <div class="jsx-9c72d2e4e5927511 flex items-start gap-3 text-white">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-6 h-6 text-blue-500 flex-shrink-0 mt-0.5">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" class="jsx-9c72d2e4e5927511">
+            </path>
+          </svg>
+          <span class="jsx-9c72d2e4e5927511">
+            Espionar quem você ama em silêncio
+          </span>
+        </div>
+        <div class="jsx-9c72d2e4e5927511 flex items-start gap-3 text-white">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-6 h-6 text-yellow-500 flex-shrink-0 mt-0.5">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
+            class="jsx-9c72d2e4e5927511">
+            </path>
+          </svg>
+          <span class="jsx-9c72d2e4e5927511">
+            Ver se alguém tá falando mal de você pelas costas
+          </span>
+        </div>
+        <div class="jsx-9c72d2e4e5927511 flex items-start gap-3 text-white">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-6 h-6 text-green-500 flex-shrink-0 mt-0.5">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+            class="jsx-9c72d2e4e5927511">
+            </path>
+          </svg>
+          <span class="jsx-9c72d2e4e5927511">
+            Proteger sua família, sua relação, sua paz
+          </span>
+        </div>
+      </div>
+    </div>
+    <!-- CPA 3 -->
+    <div class="rounded-2xl pt-4 pb-4 pr-3 pl-3 text-center relative overflow-visible"
+    style="background: linear-gradient(135deg, rgb(220, 38, 38) 0%, rgb(185, 28, 28) 100%); box-shadow: rgba(220, 38, 38, 0.3) 0px 10px 40px; opacity: 1; transform: none;">
+      <div class="jsx-9c72d2e4e5927511 relative z-10">
+        <div class="jsx-9c72d2e4e5927511 flex items-center justify-center gap-3 mb-2">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-6 h-6 text-white">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+            class="jsx-9c72d2e4e5927511">
+            </path>
+          </svg>
+          <p class="jsx-9c72d2e4e5927511 text-white font-bold text-sm">
+            Atenção: Use Com Discernimento
+          </p>
+        </div>
+        <p class="jsx-9c72d2e4e5927511 text-white/90 text-xs">
+          As informações reveladas podem ser intensas e transformadoras. Esta ferramenta
+          expõe a verdade nua e crua.
+        </p>
+      </div>
+      <div class="jsx-9c72d2e4e5927511 absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-50 pointer-events-none z-0">
+      </div>
+    </div>
+    <!-- Feedbacks -->
+    <div class="rounded-3xl p-8 shadow-xl border backdrop-blur-lg" style="background: rgb(12, 16, 17); backdrop-filter: blur(20px); border: 1px solid rgba(54, 54, 54, 0.2); opacity: 1; transform: none;">
+      <h2 class="jsx-9c72d2e4e5927511 text-2xl font-bold text-white mb-6 text-center">
+        Veja o que falam as pessoas que usam o DeepGram:
+      </h2>
+      <div class="jsx-9c72d2e4e5927511 space-y-4 mb-12">
+        <div class="jsx-9c72d2e4e5927511 pb-4 border-b border-white/10">
+          <div class="jsx-9c72d2e4e5927511 flex items-start gap-3">
+            <div style="background:linear-gradient(135deg, #EB1C8F, #DFB313)" class="jsx-9c72d2e4e5927511 rounded-full p-[2px] flex-shrink-0">
+              <div class="jsx-9c72d2e4e5927511 w-10 h-10 rounded-full overflow-hidden bg-[#0B1014] p-[2px]">
+                <img alt="Marcosvianad" loading="lazy" width="40" height="40" decoding="async"
+                data-nimg="1" class="w-full h-full object-cover rounded-full" style="color:transparent"
+                src="/_next/image?url=%2Fpitch%2Ffotos%2520-%2520coment%25C3%25A1rios%2Fchat1.png&amp;w=96&amp;q=75">
+              </div>
+            </div>
+            <div class="jsx-9c72d2e4e5927511 flex-1">
+              <div class="jsx-9c72d2e4e5927511 flex items-center gap-2 mb-1">
+                <h4 class="jsx-9c72d2e4e5927511 font-bold text-white text-sm blur-sm select-none">
+                  Marcosvianad
+                </h4>
+                <span class="jsx-9c72d2e4e5927511 text-gray-400 text-xs">
+                  3h
+                </span>
+              </div>
+              <p class="jsx-9c72d2e4e5927511 text-gray-300 text-sm leading-relaxed">
+                Eu tava desconfiando, mas não tinha certeza… Quando paguei a versão completa
+                vi os directs e os stories escondidos fiquei sem chão. Mas pelo menos eu
+                soube a verdade.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="jsx-9c72d2e4e5927511 pb-4 border-b border-white/10">
+          <div class="jsx-9c72d2e4e5927511 flex items-start gap-3">
+            <div class="jsx-9c72d2e4e5927511 w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+              <img alt="Gieselferreira_34" loading="lazy" width="40" height="40" decoding="async"
+              data-nimg="1" class="w-full h-full object-cover" style="color:transparent"
+              srcset="/_next/image?url=%2Fpitch%2Ffotos%2520-%2520coment%25C3%25A1rios%2Fchat2.png&amp;w=48&amp;q=75 1x, /_next/image?url=%2Fpitch%2Ffotos%2520-%2520coment%25C3%25A1rios%2Fchat2.png&amp;w=96&amp;q=75 2x"
+              src="/_next/image?url=%2Fpitch%2Ffotos%2520-%2520coment%25C3%25A1rios%2Fchat2.png&amp;w=96&amp;q=75">
+            </div>
+            <div class="jsx-9c72d2e4e5927511 flex-1">
+              <div class="jsx-9c72d2e4e5927511 flex items-center gap-2 mb-1">
+                <h4 class="jsx-9c72d2e4e5927511 font-bold text-white text-sm blur-sm select-none">
+                  Gieselferreira_34
+                </h4>
+                <span class="jsx-9c72d2e4e5927511 text-gray-400 text-xs">
+                  5h
+                </span>
+              </div>
+              <p class="jsx-9c72d2e4e5927511 text-gray-300 text-sm leading-relaxed">
+                Usei no insta de uma ficante minha vi que ele tava com outro há meses.
+                A ferramenta me deu paz.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="jsx-9c72d2e4e5927511 pb-4 border-b border-white/10">
+          <div class="jsx-9c72d2e4e5927511 flex items-start gap-3">
+            <div style="background:linear-gradient(135deg, #EB1C8F, #DFB313)" class="jsx-9c72d2e4e5927511 rounded-full p-[2px] flex-shrink-0">
+              <div class="jsx-9c72d2e4e5927511 w-10 h-10 rounded-full overflow-hidden bg-[#0B1014] p-[2px]">
+                <img alt="o__prozind34" loading="lazy" width="40" height="40" decoding="async"
+                data-nimg="1" class="w-full h-full object-cover rounded-full" style="color:transparent"
+                srcset="/_next/image?url=%2Fpitch%2Ffotos%2520-%2520coment%25C3%25A1rios%2Fchat1-1.png&amp;w=48&amp;q=75 1x, /_next/image?url=%2Fpitch%2Ffotos%2520-%2520coment%25C3%25A1rios%2Fchat1-1.png&amp;w=96&amp;q=75 2x"
+                src="/_next/image?url=%2Fpitch%2Ffotos%2520-%2520coment%25C3%25A1rios%2Fchat1-1.png&amp;w=96&amp;q=75">
+              </div>
+            </div>
+            <div class="jsx-9c72d2e4e5927511 flex-1">
+              <div class="jsx-9c72d2e4e5927511 flex items-center gap-2 mb-1">
+                <h4 class="jsx-9c72d2e4e5927511 font-bold text-white text-sm blur-sm select-none">
+                  o__prozind34
+                </h4>
+                <span class="jsx-9c72d2e4e5927511 text-gray-400 text-xs">
+                  1d
+                </span>
+              </div>
+              <p class="jsx-9c72d2e4e5927511 text-gray-300 text-sm leading-relaxed">
+                Achei que era fake no começo. na versão completa eu testei com @ do boy
+                e vi um monte de coisa kkkkk. Localização, fotos escondidas, até conversas
+                apagadas.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="jsx-9c72d2e4e5927511 pb-4 border-b border-white/10">
+          <div class="jsx-9c72d2e4e5927511 flex items-start gap-3">
+            <div class="jsx-9c72d2e4e5927511 w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+              <img alt="Carloshamburguer" loading="lazy" width="40" height="40" decoding="async"
+              data-nimg="1" class="w-full h-full object-cover" style="color:transparent"
+              srcset="/_next/image?url=%2Fpitch%2Ffotos%2520-%2520coment%25C3%25A1rios%2Fchat2-1.png&amp;w=48&amp;q=75 1x, /_next/image?url=%2Fpitch%2Ffotos%2520-%2520coment%25C3%25A1rios%2Fchat2-1.png&amp;w=96&amp;q=75 2x"
+              src="/_next/image?url=%2Fpitch%2Ffotos%2520-%2520coment%25C3%25A1rios%2Fchat2-1.png&amp;w=96&amp;q=75">
+            </div>
+            <div class="jsx-9c72d2e4e5927511 flex-1">
+              <div class="jsx-9c72d2e4e5927511 flex items-center gap-2 mb-1">
+                <h4 class="jsx-9c72d2e4e5927511 font-bold text-white text-sm blur-sm select-none">
+                  Carloshamburguer
+                </h4>
+                <span class="jsx-9c72d2e4e5927511 text-gray-400 text-xs">
+                  5d
+                </span>
+              </div>
+              <p class="jsx-9c72d2e4e5927511 text-gray-300 text-sm leading-relaxed">
+                a função de ver a localização em tempo real é muito bom kkkkk
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="jsx-9c72d2e4e5927511 pb-4 border-b border-white/10">
+          <div class="jsx-9c72d2e4e5927511 flex items-start gap-3">
+            <div class="jsx-9c72d2e4e5927511 w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+              <img alt="Rebecasou4" loading="lazy" width="40" height="40" decoding="async"
+              data-nimg="1" class="w-full h-full object-cover" style="color:transparent"
+              srcset="/_next/image?url=%2Fpitch%2Ffotos%2520-%2520coment%25C3%25A1rios%2Fchat2-2.png&amp;w=48&amp;q=75 1x, /_next/image?url=%2Fpitch%2Ffotos%2520-%2520coment%25C3%25A1rios%2Fchat2-2.png&amp;w=96&amp;q=75 2x"
+              src="/_next/image?url=%2Fpitch%2Ffotos%2520-%2520coment%25C3%25A1rios%2Fchat2-2.png&amp;w=96&amp;q=75">
+            </div>
+            <div class="jsx-9c72d2e4e5927511 flex-1">
+              <div class="jsx-9c72d2e4e5927511 flex items-center gap-2 mb-1">
+                <h4 class="jsx-9c72d2e4e5927511 font-bold text-white text-sm blur-sm select-none">
+                  Rebecasou4
+                </h4>
+                <span class="jsx-9c72d2e4e5927511 text-gray-400 text-xs">
+                  3 sem
+                </span>
+              </div>
+              <p class="jsx-9c72d2e4e5927511 text-gray-300 text-sm leading-relaxed">
+                não vivo sem essa ferramenta, conheci ela uns meses atrás no tiktok e
+                até hoje uso em alguns perfis que to desconfiado
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="jsx-9c72d2e4e5927511 pb-4 ">
+          <div class="jsx-9c72d2e4e5927511 flex items-start gap-3">
+            <div class="jsx-9c72d2e4e5927511 w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+              <img alt="tarantulas345_4" loading="lazy" width="40" height="40" decoding="async"
+              data-nimg="1" class="w-full h-full object-cover" style="color:transparent"
+              srcset="/_next/image?url=%2Fpitch%2Ffotos%2520-%2520coment%25C3%25A1rios%2Fchat1-1.png&amp;w=48&amp;q=75 1x, /_next/image?url=%2Fpitch%2Ffotos%2520-%2520coment%25C3%25A1rios%2Fchat1-1.png&amp;w=96&amp;q=75 2x"
+              src="/_next/image?url=%2Fpitch%2Ffotos%2520-%2520coment%25C3%25A1rios%2Fchat1-1.png&amp;w=96&amp;q=75">
+            </div>
+            <div class="jsx-9c72d2e4e5927511 flex-1">
+              <div class="jsx-9c72d2e4e5927511 flex items-center gap-2 mb-1">
+                <h4 class="jsx-9c72d2e4e5927511 font-bold text-white text-sm blur-sm select-none">
+                  tarantulas345_4
+                </h4>
+                <span class="jsx-9c72d2e4e5927511 text-gray-400 text-xs">
+                  2 sem
+                </span>
+              </div>
+              <p class="jsx-9c72d2e4e5927511 text-gray-300 text-sm leading-relaxed">
+                Não recomendo pra quem não quer ver a verdade.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="background:linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);box-shadow:0 10px 40px rgba(220, 38, 38, 0.3)"
+      class="jsx-9c72d2e4e5927511 rounded-2xl pt-4 pb-4 pr-3 pl-3 text-center relative overflow-hidden">
+        <div class="jsx-9c72d2e4e5927511 relative z-10">
+          <p class="jsx-9c72d2e4e5927511 text-white font-bold text-sm mb-2">
+            Essa é a verdade crua. Você decide se quer ver.
+          </p>
+        </div>
+        <div class="jsx-9c72d2e4e5927511 absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-50">
+        </div>
+      </div>
+    </div>
+    <!-- Planos -->
+    <div class="flex flex-col items-center gap-3" style="opacity: 1; transform: none;">
+      <p class="jsx-9c72d2e4e5927511 text-white text-center text-lg md:text-xl font-semibold max-w-2xl">
+        Quando vale ter acesso a essa ferramenta poderosa de forma vitalícia?
+      </p>
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-10 h-10 text-white/60 animate-bounce">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M19 14l-7 7m0 0l-7-7m7 7V3" class="jsx-9c72d2e4e5927511">
+        </path>
+      </svg>
+    </div>
+    <div id="planos-container" style="opacity: 1; transform: none;">
+      <div class="jsx-9c72d2e4e5927511 text-center mb-8">
+        <div style="background:linear-gradient(135deg, #EB1C8F, #DFB313)" class="jsx-9c72d2e4e5927511 inline-flex items-center gap-2 px-4 py-2 rounded-full mb-4 animate-pulse">
+          <span class="jsx-9c72d2e4e5927511 text-white font-bold">
+            BLACK FRIDAY LIMITADA
+          </span>
+        </div>
+        <h2 class="jsx-9c72d2e4e5927511 text-3xl md:text-4xl font-extrabold text-white mb-2">
+          ESCOLHA SEU PLANO
+        </h2>
+        <p style="color:#DFB313" class="jsx-9c72d2e4e5927511 text-xl font-bold">
+          POR TEMPO LIMITADO
+        </p>
+      </div>
+      <div class="jsx-9c72d2e4e5927511 grid md:grid-cols-2 gap-6 mb-6">
+        <div class="jsx-9c72d2e4e5927511 bg-black/40 rounded-2xl p-5 border border-white/10 hover:border-white/30 transition-all relative overflow-hidden">
+          <div class="jsx-9c72d2e4e5927511 absolute inset-0 overflow-hidden">
+            <div style="animation:shine 3s infinite;transform:translateX(-100%)" class="jsx-9c72d2e4e5927511 absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent">
+            </div>
+          </div>
+          <div class="jsx-9c72d2e4e5927511 relative z-10">
+            <h3 class="jsx-9c72d2e4e5927511 text-xl font-bold text-white mb-2 text-center">
+              Apenas acesso ao perfil
+            </h3>
+            <p class="jsx-9c72d2e4e5927511 text-gray-400 text-center mb-3 text-xs">
+              Acesso ao perfil de @
+              <!-- -->
+              1mpormes
+            </p>
+            <div class="jsx-9c72d2e4e5927511 text-center mb-3">
+              <p class="jsx-9c72d2e4e5927511 text-red-400 line-through text-sm mb-1">
+                De: R$ 130,00
+              </p>
+              <div class="jsx-9c72d2e4e5927511 rounded-xl p-3 bg-gray-700">
+                <p class="jsx-9c72d2e4e5927511 text-3xl text-white font-extrabold">
+                  R$
+                  <!-- -->
+                  49
+                  <span class="jsx-9c72d2e4e5927511 text-xl">
+                    ,90
+                  </span>
+                </p>
+              </div>
+            </div>
+            <ul class="jsx-9c72d2e4e5927511 space-y-1.5 mb-3 text-xs">
+              <li class="jsx-9c72d2e4e5927511 flex items-start gap-1.5 text-white">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-3 h-3 text-green-500 flex-shrink-0 mt-0.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M5 13l4 4L19 7" class="jsx-9c72d2e4e5927511">
+                  </path>
+                </svg>
+                <span class="jsx-9c72d2e4e5927511">
+                  Acesso ao perfil de @
+                  <!-- -->
+                  1mpormes
+                </span>
+              </li>
+              <li class="jsx-9c72d2e4e5927511 flex items-start gap-1.5 text-white">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-3 h-3 text-green-500 flex-shrink-0 mt-0.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M5 13l4 4L19 7" class="jsx-9c72d2e4e5927511">
+                  </path>
+                </svg>
+                <span class="jsx-9c72d2e4e5927511">
+                  Stories ocultos
+                </span>
+              </li>
+              <li class="jsx-9c72d2e4e5927511 flex items-start gap-1.5 text-white">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-3 h-3 text-green-500 flex-shrink-0 mt-0.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M5 13l4 4L19 7" class="jsx-9c72d2e4e5927511">
+                  </path>
+                </svg>
+                <span class="jsx-9c72d2e4e5927511">
+                  Directs em tempo real
+                </span>
+              </li>
+              <li class="jsx-9c72d2e4e5927511 flex items-start gap-1.5 text-white">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-3 h-3 text-green-500 flex-shrink-0 mt-0.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M5 13l4 4L19 7" class="jsx-9c72d2e4e5927511">
+                  </path>
+                </svg>
+                <span class="jsx-9c72d2e4e5927511">
+                  Localização em tempo real
+                </span>
+              </li>
+              <li class="jsx-9c72d2e4e5927511 flex items-start gap-1.5 text-white">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-3 h-3 text-green-500 flex-shrink-0 mt-0.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M5 13l4 4L19 7" class="jsx-9c72d2e4e5927511">
+                  </path>
+                </svg>
+                <span class="jsx-9c72d2e4e5927511">
+                  Acesso a mídia (fotos e vídeos)
+                </span>
+              </li>
+            </ul>
+            <button id="plan-basic-btn" class="jsx-9c72d2e4e5927511 w-full py-2.5 px-4 rounded-xl font-semibold text-sm text-white transition-all hover:scale-105 bg-gray-700 hover:bg-gray-600">
+              Escolher Plano
+            </button>
+          </div>
+        </div>
+        <div class="jsx-9c72d2e4e5927511 bg-black/40 rounded-2xl p-8 border-2 border-green-500 hover:border-green-400 transition-all relative overflow-hidden">
+          <div class="jsx-9c72d2e4e5927511 absolute inset-0 overflow-hidden">
+            <div style="animation:shine 3s infinite;animation-delay:1.5s;transform:translateX(-100%)"
+            class="jsx-9c72d2e4e5927511 absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent">
+            </div>
+          </div>
+          <div class="jsx-9c72d2e4e5927511 absolute top-5 left-1/2 transform -translate-x-1/2 z-20">
+            <span class="jsx-9c72d2e4e5927511 bg-green-500 text-white text-xt font-bold px-3 py-1 rounded-full">
+              MAIS ESCOLHIDO
+            </span>
+          </div>
+          <div class="jsx-9c72d2e4e5927511 relative z-10 top-5 ">
+            <h3 class="jsx-9c72d2e4e5927511 text-2xl font-bold text-white mb-3 text-center">
+              Acesso ao perfil de @
+              <!-- -->
+              1mpormes
+              <!-- -->
+              + Ferramenta completa do DeepGram
+            </h3>
+            <p class="jsx-9c72d2e4e5927511 text-gray-400 text-center mb-4 text-sm">
+              Acesso completo + Ferramenta vitalícia
+            </p>
+            <div class="jsx-9c72d2e4e5927511 text-center mb-4">
+              <p class="jsx-9c72d2e4e5927511 text-red-400 line-through text-lg mb-2">
+                De: R$ 279,90
+              </p>
+              <div class="jsx-9c72d2e4e5927511 rounded-xl p-4 bg-green-500">
+                <p class="jsx-9c72d2e4e5927511 text-4xl text-white font-extrabold">
+                  R$
+                  <!-- -->
+                  59
+                  <span class="jsx-9c72d2e4e5927511 text-2xl">
+                    ,90
+                  </span>
+                </p>
+              </div>
+            </div>
+            <ul class="jsx-9c72d2e4e5927511 space-y-2 mb-4 text-sm">
+              <li class="jsx-9c72d2e4e5927511 flex items-start gap-2 text-white">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-4 h-4 text-green-500 flex-shrink-0 mt-0.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M5 13l4 4L19 7" class="jsx-9c72d2e4e5927511">
+                  </path>
+                </svg>
+                <span class="jsx-9c72d2e4e5927511">
+                  Acesso completo ao perfil de @
+                  <!-- -->
+                  1mpormes
+                </span>
+              </li>
+              <li class="jsx-9c72d2e4e5927511 flex items-start gap-2 text-white">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-4 h-4 text-green-500 flex-shrink-0 mt-0.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M5 13l4 4L19 7" class="jsx-9c72d2e4e5927511">
+                  </path>
+                </svg>
+                <span class="jsx-9c72d2e4e5927511">
+                  Stories ocultos ou postados apenas para melhores amigos
+                </span>
+              </li>
+              <li class="jsx-9c72d2e4e5927511 flex items-start gap-2 text-white">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-4 h-4 text-green-500 flex-shrink-0 mt-0.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M5 13l4 4L19 7" class="jsx-9c72d2e4e5927511">
+                  </path>
+                </svg>
+                <span class="jsx-9c72d2e4e5927511">
+                  Acesso a mídia (fotos e vídeos) recebidos e enviados por @
+                  <!-- -->
+                  1mpormes
+                </span>
+              </li>
+              <li class="jsx-9c72d2e4e5927511 flex items-start gap-2 text-white">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-4 h-4 text-green-500 flex-shrink-0 mt-0.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M5 13l4 4L19 7" class="jsx-9c72d2e4e5927511">
+                  </path>
+                </svg>
+                <span class="jsx-9c72d2e4e5927511">
+                  Directs em tempo real e directs antigos (até 18 meses atrás)
+                </span>
+              </li>
+              <li class="jsx-9c72d2e4e5927511 flex items-start gap-2 text-white">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-4 h-4 text-green-500 flex-shrink-0 mt-0.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M5 13l4 4L19 7" class="jsx-9c72d2e4e5927511">
+                  </path>
+                </svg>
+                <span class="jsx-9c72d2e4e5927511">
+                  Localização em tempo real e locais visitados frequentes
+                </span>
+              </li>
+              <li class="jsx-9c72d2e4e5927511 border-t border-white/20 my-3 pt-3">
+              </li>
+              <li class="jsx-9c72d2e4e5927511 flex items-start gap-2 text-white">
+                <svg fill="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  class="jsx-9c72d2e4e5927511">
+                  </path>
+                </svg>
+                <span class="jsx-9c72d2e4e5927511 font-bold">
+                  Notificações em tempo real de tudo que acontecer na conta de @
+                  <!-- -->
+                  1mpormes
+                </span>
+              </li>
+              <li class="jsx-9c72d2e4e5927511 flex items-start gap-2 text-white">
+                <svg fill="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  class="jsx-9c72d2e4e5927511">
+                  </path>
+                </svg>
+                <span class="jsx-9c72d2e4e5927511 font-bold">
+                  Relatório detalhado do perfil com análise de IA
+                </span>
+              </li>
+              <li class="jsx-9c72d2e4e5927511 flex items-start gap-2 text-white">
+                <svg fill="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-4 h-4 text-yellow-400 flex-shrink-0 mt-0.5">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  class="jsx-9c72d2e4e5927511">
+                  </path>
+                </svg>
+                <span class="jsx-9c72d2e4e5927511 font-bold">
+                  Stalkear quantos perfis quiser (ILIMITADO)
+                </span>
+              </li>
+              <li class="jsx-9c72d2e4e5927511 flex items-start gap-2 text-white">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-4 h-4 text-yellow-500 flex-shrink-0 mt-0.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M5 13l4 4L19 7" class="jsx-9c72d2e4e5927511">
+                  </path>
+                </svg>
+                <span class="jsx-9c72d2e4e5927511 font-bold">
+                  Acesso vitalício
+                </span>
+              </li>
+              <li class="jsx-9c72d2e4e5927511 flex items-start gap-2 text-white">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-4 h-4 text-yellow-500 flex-shrink-0 mt-0.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M5 13l4 4L19 7" class="jsx-9c72d2e4e5927511">
+                  </path>
+                </svg>
+                <span class="jsx-9c72d2e4e5927511 font-bold">
+                  Sem mensalidades
+                </span>
+              </li>
+              <li class="jsx-9c72d2e4e5927511 flex items-start gap-2 text-white">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-4 h-4 text-yellow-500 flex-shrink-0 mt-0.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M5 13l4 4L19 7" class="jsx-9c72d2e4e5927511">
+                  </path>
+                </svg>
+                <span class="jsx-9c72d2e4e5927511 font-bold">
+                  Localizações antigas e relatório de locais mais visitados
+                </span>
+              </li>
+              <li class="jsx-9c72d2e4e5927511 flex items-start gap-2 text-white">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-4 h-4 text-yellow-500 flex-shrink-0 mt-0.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M5 13l4 4L19 7" class="jsx-9c72d2e4e5927511">
+                  </path>
+                </svg>
+                <span class="jsx-9c72d2e4e5927511 font-bold">
+                  Direct antigos (até 18 meses atrás)
+                </span>
+              </li>
+            </ul>
+            <button id="plan-complete-btn" class="jsx-9c72d2e4e5927511 w-full py-3 px-4 rounded-xl font-bold text-white transition-all hover:scale-105 bg-green-500">
+              Escolher Plano
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="jsx-9c72d2e4e5927511 grid grid-cols-2 gap-3 mb-6">
+        <div class="jsx-9c72d2e4e5927511 text-center bg-white/5 p-3 rounded-xl border border-white/10">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-8 h-8 mx-auto mb-1 text-blue-500">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" class="jsx-9c72d2e4e5927511">
+            </path>
+          </svg>
+          <p class="jsx-9c72d2e4e5927511 text-white text-xs font-medium">
+            Acesso Vitalício
+          </p>
+        </div>
+        <div class="jsx-9c72d2e4e5927511 text-center bg-white/5 p-3 rounded-xl border border-white/10">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-8 h-8 mx-auto mb-1 text-green-500">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
+            class="jsx-9c72d2e4e5927511">
+            </path>
+          </svg>
+          <p class="jsx-9c72d2e4e5927511 text-white text-xs font-medium">
+            Suporte 24/7
+          </p>
+        </div>
+      </div>
+      <div class="jsx-9c72d2e4e5927511 flex items-center justify-center gap-2 text-gray-400 text-sm">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-4 h-4 text-green-500">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+          class="jsx-9c72d2e4e5927511">
+          </path>
+        </svg>
+        <span class="jsx-9c72d2e4e5927511">
+          Compra 100% Segura • Criptografia SSL
+        </span>
+      </div>
+    </div>
+    <div class="flex justify-center" style="opacity: 1; transform: none;">
+      <div class="jsx-9c72d2e4e5927511 mt-8 rounded-2xl p-6 max-w-md text-center bg-green-600">
+        <div class="jsx-9c72d2e4e5927511 flex items-center justify-center gap-3 mb-2">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-8 h-8 text-green-900">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+            class="jsx-9c72d2e4e5927511">
+            </path>
+          </svg>
+          <h3 class="jsx-9c72d2e4e5927511 text-xl font-bold text-white">
+            Garantia de 30 Dias
+          </h3>
+        </div>
+        <p class="jsx-9c72d2e4e5927511 text-white text-sm">
+          Teste sem risco! Se não gostar, devolvemos 100% do seu dinheiro.
+        </p>
+      </div>
+    </div>
+    <div class="rounded-3xl p-8 shadow-xl border backdrop-blur-lg" style="background: rgb(12, 16, 17); backdrop-filter: blur(20px); border: 1px solid rgba(54, 54, 54, 0.2); opacity: 1; transform: none;">
+      <h2 class="jsx-9c72d2e4e5927511 text-3xl font-bold text-white mb-8 text-center">
+        Perguntas Frequentes
+      </h2>
+      <div class="jsx-9c72d2e4e5927511 space-y-3">
+        <div class="jsx-9c72d2e4e5927511 bg-white/5 rounded-xl border border-white/10 overflow-hidden faq-item">
+          <button aria-expanded="false" class="jsx-9c72d2e4e5927511 w-full p-5 flex items-center justify-between hover:bg-white/5 transition-all">
+            <h4 class="jsx-9c72d2e4e5927511 text-white font-bold text-left flex items-start gap-2">
+              <span class="jsx-9c72d2e4e5927511 text-green-500">
+                •
+              </span>
+              A ferramenta realmente funciona?
+            </h4>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-5 h-5 text-white flex-shrink-0 transition-transform ">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 9l-7 7-7-7" class="jsx-9c72d2e4e5927511">
+              </path>
+            </svg>
+          </button>
+          <div class="faq-content px-5 pb-5 text-gray-300 text-sm hidden">
+            Sim. Ao confirmar o perfil, o painel exibe informações e atualizações
+            em tempo real, organizadas de maneira simples e segura.
+          </div>
+        </div>
+        <div class="jsx-9c72d2e4e5927511 bg-white/5 rounded-xl border border-white/10 overflow-hidden faq-item">
+          <button aria-expanded="false" class="jsx-9c72d2e4e5927511 w-full p-5 flex items-center justify-between hover:bg-white/5 transition-all">
+            <h4 class="jsx-9c72d2e4e5927511 text-white font-bold text-left flex items-start gap-2">
+              <span class="jsx-9c72d2e4e5927511 text-green-500">
+                •
+              </span>
+              A pessoa vai saber que eu stalkeei o perfil dela?
+            </h4>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-5 h-5 text-white flex-shrink-0 transition-transform ">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 9l-7 7-7-7" class="jsx-9c72d2e4e5927511">
+              </path>
+            </svg>
+          </button>
+          <div class="faq-content px-5 pb-5 text-gray-300 text-sm hidden">
+            Não. O acesso é sigiloso, sem alertas e sem deixar rastros no perfil analisado.
+          </div>
+        </div>
+        <div class="jsx-9c72d2e4e5927511 bg-white/5 rounded-xl border border-white/10 overflow-hidden faq-item">
+          <button aria-expanded="false" class="jsx-9c72d2e4e5927511 w-full p-5 flex items-center justify-between hover:bg-white/5 transition-all">
+            <h4 class="jsx-9c72d2e4e5927511 text-white font-bold text-left flex items-start gap-2">
+              <span class="jsx-9c72d2e4e5927511 text-green-500">
+                •
+              </span>
+              Funciona em perfis privados?
+            </h4>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-5 h-5 text-white flex-shrink-0 transition-transform ">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 9l-7 7-7-7" class="jsx-9c72d2e4e5927511">
+              </path>
+            </svg>
+          </button>
+          <div class="faq-content px-5 pb-5 text-gray-300 text-sm hidden">
+            Sim. Os recursos do plano completo exibem conteúdos ocultos e históricos
+            conforme disponibilidade.
+          </div>
+        </div>
+        <div class="jsx-9c72d2e4e5927511 bg-white/5 rounded-xl border border-white/10 overflow-hidden faq-item">
+          <button aria-expanded="false" class="jsx-9c72d2e4e5927511 w-full p-5 flex items-center justify-between hover:bg-white/5 transition-all">
+            <h4 class="jsx-9c72d2e4e5927511 text-white font-bold text-left flex items-start gap-2">
+              <span class="jsx-9c72d2e4e5927511 text-green-500">
+                •
+              </span>
+              Preciso instalar alguma coisa?
+            </h4>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-5 h-5 text-white flex-shrink-0 transition-transform ">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 9l-7 7-7-7" class="jsx-9c72d2e4e5927511">
+              </path>
+            </svg>
+          </button>
+          <div class="faq-content px-5 pb-5 text-gray-300 text-sm hidden">
+            Não. Tudo funciona pelo navegador, sem necessidade de instalação.
+          </div>
+        </div>
+        <div class="jsx-9c72d2e4e5927511 bg-white/5 rounded-xl border border-white/10 overflow-hidden faq-item">
+          <button aria-expanded="false" class="jsx-9c72d2e4e5927511 w-full p-5 flex items-center justify-between hover:bg-white/5 transition-all">
+            <h4 class="jsx-9c72d2e4e5927511 text-white font-bold text-left flex items-start gap-2">
+              <span class="jsx-9c72d2e4e5927511 text-green-500">
+                •
+              </span>
+              Como funciona a garantia?
+            </h4>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-5 h-5 text-white flex-shrink-0 transition-transform ">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 9l-7 7-7-7" class="jsx-9c72d2e4e5927511">
+              </path>
+            </svg>
+          </button>
+          <div class="faq-content px-5 pb-5 text-gray-300 text-sm hidden">
+            Você tem 30 dias para testar. Se não gostar, devolvemos 100% do seu dinheiro.
+          </div>
+        </div>
+        <div class="jsx-9c72d2e4e5927511 bg-white/5 rounded-xl border border-white/10 overflow-hidden faq-item">
+          <button aria-expanded="false" class="jsx-9c72d2e4e5927511 w-full p-5 flex items-center justify-between hover:bg-white/5 transition-all">
+            <h4 class="jsx-9c72d2e4e5927511 text-white font-bold text-left flex items-start gap-2">
+              <span class="jsx-9c72d2e4e5927511 text-green-500">
+                •
+              </span>
+              Quanto tempo tenho acesso?
+            </h4>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="jsx-9c72d2e4e5927511 w-5 h-5 text-white flex-shrink-0 transition-transform ">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 9l-7 7-7-7" class="jsx-9c72d2e4e5927511">
+              </path>
+            </svg>
+          </button>
+          <div class="faq-content px-5 pb-5 text-gray-300 text-sm hidden">
+            No plano completo, o acesso é vitalício e sem mensalidades.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded',
+    function() {
+      var t = document.getElementById('pitch-timer');
+      var d = 300;
+      (function initTimer(){
+        if (t) {
+          var txt = String(t.textContent || '').trim();
+          var m = parseInt((txt.split(':')[0] || '5'), 10);
+          var s = parseInt((txt.split(':')[1] || '0'), 10);
+          if (!isNaN(m) && !isNaN(s)) { d = (m * 60) + s }
+        }
+        function fmt(n){ return String(n).padStart(2, '0') }
+        if (!t) return;
+        t.textContent = fmt(Math.floor(d/60)) + ':' + fmt(d%60);
+        var timerId = setInterval(function(){
+          d--;
+          if (d <= 0) { d = 0; t.textContent = '00:00'; clearInterval(timerId); return }
+          t.textContent = fmt(Math.floor(d/60)) + ':' + fmt(d%60);
+        }, 1000);
+      })();
+      var data = null;
+      try {
+        data = JSON.parse(localStorage.getItem('dg_result') || 'null')
+      } catch(e) {}
+      var handle = '...';
+      var emoji = '...';
+      var posts = '...';
+      var followers = '...';
+      var following = '...';
+      var bio = '...';
+      var avatar = 'styles/img/instagram/feed/profiles/p-min-1.webp';
+      var planBasicUrl = 'https://pay.kirvano.com/bd341f0e-fba2-48d3-aa64-13940c781d0c';
+      var planCompleteUrl = 'https://pay.kirvano.com/fa832073-c18e-450f-8ccb-7bcaaab99d6f';
+      if (data) {
+        handle = data.username || handle;
+        emoji = data.full_name || emoji;
+        posts = (typeof data.posts === 'number') ? data.posts: posts;
+        followers = (typeof data.followers === 'number') ? data.followers: followers;
+        following = (typeof data.following === 'number') ? data.following: following;
+        bio = data.biography || bio;
+        avatar = data.profile_pic_url ? ('api/proxy_image.php?url=' + encodeURIComponent(data.profile_pic_url)) : avatar
+      }
+      var elH = document.getElementById('pitch-handle');
+      if (elH) {
+        elH.textContent = '@' + handle
+      }
+      var h = String(handle || '').replace(/^@+/, '');
+      if (h) {
+        var at = '@' + h;
+        var c = document.getElementById('planos-container') || document.body;
+        if (c) {
+          var html = c.innerHTML;
+          html = html.split('@<!-- -->1mpormes<!-- -->').join(at);
+          html = html.split('@<!-- -->1mpormes').join(at);
+          html = html.replace(/@\s*1mpormes/g, at);
+          c.innerHTML = html
+        }
+        var allEls = document.querySelectorAll('*');
+        allEls.forEach(function(el){
+          var ih = el.innerHTML;
+          if (!ih || ih.indexOf('1mpormes') === -1) return;
+          ih = ih.split('@<!-- -->1mpormes<!-- -->').join(at);
+          ih = ih.split('@<!-- -->1mpormes').join(at);
+          ih = ih.replace(/@\s*1mpormes/g, at);
+          ih = ih.replace(/\b1mpormes\b/g, h);
+          el.innerHTML = ih;
+        });
+      }
+      var elE = document.getElementById('pitch-emoji');
+      if (elE) {
+        elE.textContent = emoji
+      }
+      var elA = document.getElementById('pitch-avatar');
+      if (elA) {
+        elA.src = avatar
+      }
+      var rtTitle = document.querySelector('#tempo-real h3');
+      if (rtTitle) {
+        rtTitle.textContent = 'Localização em tempo real de @' + h
+      }
+      var rtImg = document.querySelector('#tempo-real img[width="64"][height="64"]');
+      if (rtImg) {
+        rtImg.src = avatar
+      }
+      var storyImgs = document.querySelectorAll('#stories-ocultos img[width="24"][height="24"]');
+      storyImgs.forEach(function(img) {
+        img.src = avatar
+      });
+      var storyHandles = document.querySelectorAll('#stories-ocultos span');
+      storyHandles.forEach(function(s) {
+        var txt = (s.textContent || '').trim();
+        if (txt === '@') {
+          s.textContent = '@' + h
+        }
+      });
+      var mediasH3 = document.getElementById('pitch-medias-h3');
+      if (mediasH3) {
+        mediasH3.textContent = 'Todas as mídias recebidas e enviadas por @' + h
+      }
+      var basicBtn = document.getElementById('plan-basic-btn');
+      if (basicBtn) {
+        basicBtn.addEventListener('click', function(){
+          location.href = planBasicUrl || '#'
+        })
+      }
+      var completeBtn = document.getElementById('plan-complete-btn');
+      if (completeBtn) {
+        completeBtn.addEventListener('click', function(){
+          location.href = planCompleteUrl || '#'
+        })
+      }
+      var elP = document.getElementById('pitch-posts');
+      if (elP) {
+        elP.textContent = (typeof posts === 'number') ? posts.toLocaleString('pt-BR') : posts
+      }
+      var elF = document.getElementById('pitch-followers');
+      if (elF) {
+        elF.textContent = (typeof followers === 'number') ? followers.toLocaleString('pt-BR') : followers
+      }
+      var elG = document.getElementById('pitch-following');
+      if (elG) {
+        elG.textContent = (typeof following === 'number') ? following.toLocaleString('pt-BR') : following
+      }
+      var elB = document.getElementById('pitch-bio');
+      if (elB) {
+        elB.textContent = bio
+      }
+      var back = document.querySelector('.pitch-back');
+      if (back) {
+        back.addEventListener('click',
+        function(e) {
+          e.preventDefault();
+          history.back()
+        })
+      }
+      var faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(function(item) {
+        var btn = item.querySelector('button');
+        var panel = item.querySelector('.faq-content');
+        var icon = btn ? btn.querySelector('svg') : null;
+        if (btn && panel) {
+          btn.addEventListener('click',
+          function() {
+            var expanded = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', expanded ? 'false': 'true');
+            panel.classList.toggle('hidden', expanded);
+            if (icon) {
+              icon.classList.toggle('rotate-180', !expanded)
+            }
+          })
+        }
+      });
+      var cards = document.querySelectorAll('.rounded-3xl.p-8.shadow-xl.border.backdrop-blur-lg');
+      cards.forEach(function(card) {
+        var h2 = card.querySelector('h2');
+        if (h2 && h2.textContent.indexOf('Veja o que falam as pessoas') !== -1) {
+          card.querySelectorAll('img').forEach(function(img) {
+            img.src = 'styles/img/chat1.webp';
+            if (img.hasAttribute('srcset')) {
+              img.removeAttribute('srcset')
+            }
+          })
+        }
+      });
+    });
+  </script>
+</body>
+</html>
