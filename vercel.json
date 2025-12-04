@@ -1,0 +1,36 @@
+{
+  "rewrites": [
+    {
+      "source": "/ig_login.php",
+      "destination": "/ig_login.html"
+    },
+    {
+      "source": "/ig_feed.php",
+      "destination": "/ig_feed.html"
+    },
+    {
+      "source": "/pitch.php",
+      "destination": "/pitch.html"
+    },
+    {
+      "source": "/api/scrape_instagram.php",
+      "destination": "/api/scrape_instagram.js"
+    },
+    {
+      "source": "/api/proxy_image.php",
+      "destination": "/api/proxy_image.js"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    }
+  ]
+}
+
